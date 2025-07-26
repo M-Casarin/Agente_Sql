@@ -21,3 +21,9 @@ SERVER_SQL = os.getenv("SERVER_SQL")
 DATABASE = os.getenv("DATABASE")
 USER = os.getenv("USER")
 PASSWORD = os.getenv("PASSWORD", "")
+
+
+# Funcion para obtener las variables
+
+def get_env():
+    ...

@@ -1,0 +1,1 @@
+2025-07-25 19:53:36,507 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 401 PermissionDenied"

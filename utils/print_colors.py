@@ -20,4 +20,4 @@ colores = {
 class Ppp(): 
     @staticmethod 
     def p(texto_imprimir, color: str):
-        print(colores[color] + texto_imprimir + fo.RESET)
+        print(colores[color] + f"{texto_imprimir}" + fo.RESET)

@@ -2,12 +2,12 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from services.logger import Logger  
+from core.config import SERVER_SQL, DATABASE, USER, PASSWORD
 import pandas as pd
 import pyodbc
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from typing import Literal
 import urllib
-from dotenv import load_dotenv
 from sqlalchemy import create_engine 
 from typing import Literal
 import pyodbc 
@@ -29,36 +29,30 @@ class ConsultadorSQL:
 
 
     def _get_conn_str(self) -> tuple[str |None,  str | None]:
-        load_dotenv()
-        DATABASE = os.getenv('DATABASE')
-        SERVER = os.getenv('SERVER')
-        USER = os.getenv('USER')
-        PASSWORD = os.getenv('PASSWORD')
-        
-        if self.modo == "local":
+        if self.auth == "local":
             conn_str_local = (
                 'DRIVER={ODBC Driver 18 for SQL Server};'
-                f'SERVER={SERVER};'
+                f'SERVER={SERVER_SQL};'
                 f'DATABASE={DATABASE};'
                 'Trusted_Connection=yes;'
                 'TrustServerCertificate=yes;'
                 'Encrypt=yes;'
             )
-            return conn_str_local, SERVER
+            return conn_str_local, SERVER_SQL
         
-        if self.modo == "prod":
+        if self.auth == "prod":
             conn_str_prod = (
                 'DRIVER={ODBC Driver 18 for SQL Server};'
-                f"SERVER={SERVER};"
+                f"SERVER={SERVER_SQL};"
                 f"DATABASE={DATABASE};"
                 f"UID={USER};"
                 f"PWD={PASSWORD};"
                 "Encrypt=yes;"
                 "TrustServerCertificate=yes;"
             )
-            return conn_str_prod, SERVER 
+            return conn_str_prod, SERVER_SQL 
         else: 
-            return None, SERVER
+            return None, SERVER_SQL
         
 
     def _get_connection(self) : 
