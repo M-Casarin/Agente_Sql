@@ -1,1 +1,55 @@
 2025-07-25 19:53:36,507 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 401 PermissionDenied"
+2025-07-25 20:09:56,714 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 401 PermissionDenied"
+2025-07-25 20:10:22,237 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 401 PermissionDenied"
+2025-07-25 20:21:59,333 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 20:22:25,040 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 20:22:29,564 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 20:22:39,575 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 20:58:13,759 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 20:58:59,056 - ERROR - [Error.create_df_from_table] Execution failed on sql 'SELECT TOP 5 * FROM [AGENTE].[dbo].[Chat_History]': ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'AGENTE.dbo.Chat_History'. (208) (SQLExecDirectW)")
+2025-07-25 20:59:19,960 - ERROR - [Error.create_df_from_table] Execution failed on sql 'SELECT TOP 5 * FROM [AGENTE].[dbo].[Chat_History]': ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'AGENTE.dbo.Chat_History'. (208) (SQLExecDirectW)")
+2025-07-25 21:00:42,540 - ERROR - [Error.create_df_from_table] Execution failed on sql 'SELECT TOP 5 * FROM [AGENTE].[dbo].[HistorialChat]': ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'AGENTE.dbo.HistorialChat'. (208) (SQLExecDirectW)")
+2025-07-25 21:02:10,847 - ERROR - [Error.create_df_from_table] Execution failed on sql 'SELECT TOP 5 * FROM [AGENTE].[dbo].[HistorialChat]': ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'AGENTE.dbo.HistorialChat'. (208) (SQLExecDirectW)")
+2025-07-25 21:02:35,312 - ERROR - [Error.create_df_from_table] Execution failed on sql 'SELECT TOP 5 * FROM [Agente].[dbo].[HistorialChat]': ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'Agente.dbo.HistorialChat'. (208) (SQLExecDirectW)")
+2025-07-25 21:03:18,078 - INFO - Consulta ejecutada con éxito: SELECT TOP 5 * FROM [Agente].[dbo].[HistorialChat]
+2025-07-25 21:19:13,198 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:19:33,654 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:19:55,703 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:20:36,642 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:21:03,988 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:21:11,254 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:29:13,041 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-07-25 21:34:51,903 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 21:34:52,042 - ERROR - [Error.execute_sql] ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Incorrect syntax near 'tu'. (102) (SQLExecDirectW)")
+2025-07-26 23:19:36,748 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-26 23:19:36,840 - ERROR - [Error.execute_sql] ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Incorrect syntax near 'la'. (102) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]An expression of non-boolean type specified in a context where a condition is expected, near ';'. (4145)")
+2025-07-26 23:19:47,740 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-26 23:19:47,751 - ERROR - [Error.execute_sql] ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Incorrect syntax near 'tu'. (102) (SQLExecDirectW)")
