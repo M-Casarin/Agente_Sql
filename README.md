@@ -25,12 +25,21 @@ python -m venv .venv
 
 pip install -r requirements.txt 
 ```
+#### Crear la tabla para el historial del chat
+```sql
+CREATE TABLE Historial_Chat (
+    id INT PRIMARY KEY IDENTITY,
+    fecha DATETIME DEFAULT GETDATE(),
+    pregunta NVARCHAR(MAX),
+    sql_generado NVARCHAR(MAX),
+    respuesta NVARCHAR(MAX)
+);
+```
 
 #### Levantar API 
 ```bash 
 uvicorn api.main:app --reload
 ```
-
 
 
 
