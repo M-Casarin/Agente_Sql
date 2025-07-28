@@ -13,3 +13,6 @@ wheels/
 .env
 
 estructura_de_carpetas.txt 
+
+# Log 
+log/app.log
