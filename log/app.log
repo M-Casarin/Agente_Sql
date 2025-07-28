@@ -164,3 +164,59 @@ pip install python-multipart
 2025-07-28 15:46:56,655 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
 2025-07-28 15:46:57,753 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
 2025-07-28 15:46:57,852 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:53:08,687 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:53:09,832 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:53:09,963 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:53:16,614 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:53:17,871 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:53:17,873 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:53:39,569 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:53:40,978 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:53:40,980 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:54:28,546 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:54:28,707 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:54:50,846 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:54:50,942 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:54:50,945 - INFO - Error al ejecutar la consulta: ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'dbo.Agente.Historial_Chat'. (208) (SQLExecDirectW)")
+2025-07-28 15:56:48,114 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:56:48,139 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:56:48,140 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 15:56:55,010 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:56:55,013 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:56:55,030 - INFO - Consulta realizada de forma exitosa: SELECT TOP 10 * FROM [Agente].[dbo].[Historial_Chat];
+2025-07-28 15:57:02,923 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:57:02,924 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:57:02,936 - INFO - Consulta realizada de forma exitosa: SELECT TOP 10 * FROM [Agente].[dbo].[Historial_Chat];
+2025-07-28 15:57:51,186 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:57:51,352 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:57:51,353 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 15:57:59,283 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:57:59,286 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:57:59,299 - INFO - Consulta realizada de forma exitosa: SELECT TOP 10 * FROM [Agente].[dbo].[Historial_Chat];
+2025-07-28 15:59:44,345 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 15:59:44,425 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 15:59:44,428 - INFO - Consulta realizada de forma exitosa: SELECT TOP 10 * FROM [Agente].[dbo].[Historial_Chat];
+2025-07-28 16:27:19,147 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:27:19,299 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:27:19,300 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 16:27:22,343 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:27:22,345 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:27:22,346 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 16:27:59,674 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:27:59,831 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:27:59,832 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 16:30:45,849 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:30:45,970 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:30:45,970 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 16:31:13,739 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:31:13,889 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:31:13,890 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 16:31:30,518 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:31:30,520 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:31:30,537 - INFO - Consulta realizada de forma exitosa: SELECT TOP 5 * FROM [Agente].[dbo].[Historial_Chat];
+2025-07-28 16:33:04,278 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:33:04,421 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:33:04,422 - INFO - Error al ejecutar la consulta: ('07002', '[07002] [Microsoft][ODBC Driver 18 for SQL Server]COUNT field incorrect or syntax error (0) (SQLExecDirectW)')
+2025-07-28 16:33:15,650 - INFO - HTTP Request: POST https://ai-kcthewizardai754464038464.cognitiveservices.azure.com/openai/deployments/gpt-4o-mini-2/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-28 16:33:15,653 - INFO - [AUTH]: local | Conexion Exitosa a la base de datos. 
+2025-07-28 16:33:15,675 - INFO - Consulta realizada de forma exitosa: SELECT TOP 10 * FROM [dbo].[Efectividad_Andromeda];

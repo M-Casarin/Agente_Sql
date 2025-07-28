@@ -125,8 +125,7 @@ class ConsultadorSQL:
         except Exception as e:
             msg = f"Error al ejecutar la consulta: {e}"
             Logger.info(msg)
-            raise RuntimeError(msg)
-
+            return "Error"
         
     def _get_chunks(
         self,
