@@ -84,44 +84,24 @@ async def chat_agente(message: str = Form(...)):
             """
         )
 
-
-
-
-        # elif isinstance(result, dict):
-        #     # Si es un diccionario, podemos formatearlo como una tabla
-        #     table_html = "<table>"
-        #     for key, value in result.items():
-        #         table_html += f"<tr><td>{html.escape(key)}</td><td>{html.escape(str(value))}</td></tr>"
-        #     table_html += "</table>"
-        #     agent_html = f'<div class="msg bot"><p><b>Resultado:</b></p>{table_html}</div>'
-        # else:
-        #     agent_html = f'<div class="msg bot" style="color:red;">Error: Tipo de resultado desconocido</div>'
-
-        # return user_html + agent_html
-
-        # # No obtuvimos un resultado 
-        # if not result or "error" in result:
-        #     raise ValueError("No se pudo ejecutar la consulta SQL o no se devolvieron resultados.")
-        
-        # # 4. Parsear resultados
-        # parser = ResultParser()
-        # parsed = parser.parse_result(result["columns"], result["rows"])
-        # table_html = parsed["html"]
-
-        # # 5. Bloque de respuesta
-        # agent_html = (
-        #     f'<div class="msg bot">'
-        #     f"<p><b>SQL:</b> {sql_query}</p>{table_html}"
-        #     f'</div>'
-        # )
-
-        # return user_html + agent_html
-        
-        agent_html  = f'<div class="msg bot">{sql_query}</div>'
-
-        return user_html + agent_html
-    
-
     except Exception as e:
         Ppp.p(f"[Error.chat_agente] {e}", color="Green")
+        return f'<div class="msg bot" style="color:red;">Error: {str(e)}</div>'
+
+
+# Panel de graficos 
+@router.post("/panel", response_class=HTMLResponse)
+async def panel(message: str = Form(...), formatted_response: str = Form(...)):
+    """
+    Endpoint para agregar resultados al panel derecho. 
+
+    - Recibe un mensaje del usuario y una respuesta formateada.
+    - Devuelve un bloque HTML para insertar en el panel derecho.
+
+    """
+    try: 
+        content = html.unescape(formatted_response)
+        return f"<div><h4>{html.escape(message)}</h4>{content}<hr></div>"
+    except Exception as e:
+        Ppp.p(f"[Error.panel] {e}", color="Green")
         return f'<div class="msg bot" style="color:red;">Error: {str(e)}</div>'
