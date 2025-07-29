@@ -25,6 +25,7 @@ python -m venv .venv
 
 pip install -r requirements.txt 
 ```
+
 #### Crear la tabla para el historial del chat
 ```sql
 CREATE TABLE Historial_Chat (
@@ -34,6 +35,24 @@ CREATE TABLE Historial_Chat (
     sql_generado NVARCHAR(MAX),
     respuesta NVARCHAR(MAX)
 );
+```
+
+### Crear el archivo .env 
+Debe seguir la siguiente forma 
+
+```
+# SQL 
+SERVER_SQL=
+DATABASE=
+USER=
+PASSWORD=
+
+# Azure
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_API_KEY=
+AZURE_OPENAI_API_VERSION=
+AZURE_OPENAI_RESOURCE_NAME=
+AZURE_OPENAI_DEPLOYMENT_NAME=
 ```
 
 #### Levantar API 
