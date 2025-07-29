@@ -62,5 +62,10 @@ uvicorn api.main:app --reload
 
 
 
+#### Muestra de como se visualiza el historial
+![Muestra 1](static/state.png)
 
-![Alt text](static/state.png)
+
+![Muestra 2](static/state_1.png)
+
+
