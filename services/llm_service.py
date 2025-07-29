@@ -43,7 +43,7 @@ class LLMService():
         user_message: str, 
         system_message: str = None,
         temperatura: float = 0.5, 
-        chat_memory_id: int = 0, # Verificar si aqui es donde mas conviene insertar el id de la memoria
+        chat_memory: list = None,
     ) -> str: 
 
         if temperatura > 1.0 or temperatura < 0: 
@@ -60,6 +60,11 @@ class LLMService():
                 {"role": "system", "content": system_message or self.system_prompt}
             )
 
+        # Si se incluye el chat memory
+        if chat_memory: 
+            for message in chat_memory: 
+                messages.append(message)
+                
         # Agregar el mensaje del usuario  
         messages.append(
             {"role": "user", "content": user_message}

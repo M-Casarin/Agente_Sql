@@ -9,9 +9,13 @@ from colorama import Fore as fre
 
 import html 
 import time 
-
+import uuid
 
 router = APIRouter()
+
+
+HISTORIAL_TABLE = "[Agente].[dbo].[Historial_Chat]"
+session_id = str(uuid.uuid4())
 
 @router.post("/chat", response_class=HTMLResponse)
 async def chat_agente(message: str = Form(...)):
@@ -24,25 +28,50 @@ async def chat_agente(message: str = Form(...)):
     """
 
     try:   
+        # 0. Generar un id unico para la sesion de mensajes 
+        Ppp.p(f"[chat_agente] Session ID: {session_id}", color="Yellow")
+        # 0.1 Recuperar mensajes anteriores dado el id 
+        consultador_historial = ConsultadorSQL(auth="local", tabla_historial=HISTORIAL_TABLE)
+        mensajes_anteriores = consultador_historial.get_historial_by_session_id(session_id)
+
+        if mensajes_anteriores: 
+            all_mensajes = []
+            print("mensajes anteriores encontrados: ")
+            print(mensajes_anteriores)
+
+            for mensaje in mensajes_anteriores: 
+                all_mensajes.append(
+                    {"role": "user", "content": mensaje["user_message"]}
+                )
+                all_mensajes.append(
+                    {"role": "assistant", "content": mensaje["sql_query"]}
+                )
         
+            Ppp.p(f"[chat_agente] Mensajes anteriores: {all_mensajes}", color="Yellow")
+
         # 1. Mostrar mensaje del usuario
         user_html = f'<div class="msg user">{message}</div>'
 
         # 2. Nuestro LLM debe traducir el mensaje a SQL 
         llm = LLMService()
-        sql_query = await llm.ask_llm(message)
+        sql_query = await llm.ask_llm(message, chat_memory=all_mensajes if mensajes_anteriores else None)
         print(fre.YELLOW + f"[LLM] SQL Query: {sql_query}" + fre.RESET) # debug 
 
-
-        # try: 
         # 3. Ejecutar el SQL
-        consultador = ConsultadorSQL(auth="local")
+        consultador = ConsultadorSQL(auth="local", tabla_historial=HISTORIAL_TABLE)
         result = consultador.execute_sql(sql_query)
         print(fre.YELLOW + f"[SQL] Result: {result}" + fre.RESET) # debug 
-        print(fre.YELLOW + f"El tipo devuelto es {type(result)}" + fre.RESET) # debug
 
-        # except Exception as e: 
+        # 3.1 Guardar la consulta en el historial 
+        data_historial = {
+            "session_id": session_id,
+            "user_message": message,
+            "sql_query": sql_query,
+            "result": str(result)[:33]
+        }
 
+        # Inssertar en la tabla de historial de chat 
+        consultador.insert_row_historial(data=data_historial)
         # Segun el tipo devuelto, ejucatmos una accion. 
         print(fre.YELLOW + f"[SQL] Result: {type(result)}" + fre.RESET) # debug
         # Respuesta sin formato, es solo texto

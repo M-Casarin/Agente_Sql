@@ -28,12 +28,12 @@ pip install -r requirements.txt
 
 #### Crear la tabla para el historial del chat
 ```sql
-CREATE TABLE Historial_Chat (
-    id INT PRIMARY KEY IDENTITY,
-    fecha DATETIME DEFAULT GETDATE(),
-    pregunta NVARCHAR(MAX),
-    sql_generado NVARCHAR(MAX),
-    respuesta NVARCHAR(MAX)
+CREATE TABLE Historial_Chat(
+	[session_id] int,
+	[date] DATETIME DEFAULT GETDATE(), 
+	user_message varchar(255),
+	sql_query varchar(255), 
+	result varchar (255)
 );
 ```
 

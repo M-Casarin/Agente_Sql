@@ -18,10 +18,9 @@ class ConsultadorSQL:
     """
     Clase para manejar y ejecutar sentencias de SQL en nuestro servidor de SQL Server. 
 
-
     """
 
-    def __init__(self, auth: Literal['local', 'prod']): 
+    def __init__(self, auth: Literal['local', 'prod'], tabla_historial: str = "Historial_Chat"): 
         """ 
         Inicializa la con la cadena de conexión adecuada. 
 
@@ -32,7 +31,7 @@ class ConsultadorSQL:
         self.connection = self._get_connection()
         if not self.connection: 
             raise ValueError("[Error.ConsutadorSQL] Error al incializar ConsultadorSQL")
-
+        self.tabla_historial = tabla_historial
 
     def _get_conn_str(self) -> tuple[str |None,  str | None]:
         """
@@ -104,11 +103,13 @@ class ConsultadorSQL:
         if not self.connection:
             raise ValueError("[Error.ConsultadorSQL.execute_sql] No hay conexión establecida.")
 
+
         try:
             cursor = self.connection.cursor()
             cursor.execute(query)
             columns = [column[0] for column in cursor.description]
             rows = cursor.fetchall()
+
 
             # Validación: cada fila debe tener len() igual a columnas
             for row in rows:
@@ -126,7 +127,54 @@ class ConsultadorSQL:
             msg = f"Error al ejecutar la consulta: {e}"
             Logger.info(msg)
             return "Error"
+
+    def insert_row_historial(self,  data: Dict[str, str]) -> bool:
+        """
+        Inserta una fila en la tabla de historial.
+
+        Args:
+            table (str): Nombre de la tabla.
+            data (Dict[str, str]): Datos a insertar.
+
+        Returns:
+            bool: True si la inserción fue exitosa, False en caso contrario.
+        """
+        if not self.connection:
+            raise ValueError("[Error.ConsultadorSQL.insert_row_historial] No hay conexión establecida.")
+
+        try:
+            cursor = self.connection.cursor()
+            columns = ', '.join(data.keys())
+            placeholders = ', '.join(['?'] * len(data))
+            query = f"INSERT INTO {self.tabla_historial} ({columns}) VALUES ({placeholders})"
+            cursor.execute(query, tuple(data.values()))
+            self.connection.commit()
+            Logger.info(f"[SQL] Fila insertada en {self.tabla_historial}: {data}")
+            return True
+        except Exception as e:
+            Logger.error(f"[Error.ConsultadorSQL.insert_row_historial] {e}")
+            return False
         
+    def get_historial_by_session_id(self, id_session: str) -> List[Dict[str, str]]:
+        """
+        Obtiene el historial de chat por ID de sesión.
+
+        Args:
+            id_session (str): ID de la sesión.
+
+        Returns:
+            List[Dict[str, str]]: Lista de diccionarios con el historial.
+        """
+        if not self.connection:
+            raise ValueError("[Error.ConsultadorSQL.get_historial_by_session_id] No hay conexión establecida.")
+
+        query = f"SELECT * FROM {self.tabla_historial} WHERE session_id = ?"
+        cursor = self.connection.cursor()
+        cursor.execute(query, (id_session,))
+        columns = [column[0] for column in cursor.description]
+        rows = cursor.fetchall()
+        return [dict(zip(columns, row)) for row in rows]
+
     def _get_chunks(
         self,
         query: str, 
