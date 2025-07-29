@@ -1,8 +1,7 @@
 # Agente SLQ 
 Transforma las sentencias de lenguaje natural a sentencias de SQL, las executa y pinta los resultados en pantalla.
 
-## Uso 
-
+## **Uso** 
 
 ### Entorno virtual 
 
@@ -13,6 +12,7 @@ Con uv run api/main.py arrancara la api, y creara el entorno virtual con las dep
 pip install uv 
 uv run api/main.py 
 ```
+
 #### Opcion 2. Usar pip 
 
 ```bash
