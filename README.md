@@ -63,3 +63,4 @@ uvicorn api.main:app --reload
 
 
 
+![Alt text](static/state.png)
