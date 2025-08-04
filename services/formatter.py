@@ -1,9 +1,6 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from typing import Literal, Tuple
-import pandas as pd
-from typing import Literal, Tuple
 import pandas as pd
 from utils.print_colors import Ppp
 from typing import Literal, Tuple
