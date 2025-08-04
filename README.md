@@ -1,4 +1,4 @@
-# Agente SLQ 
+# Agente SQL 
 Transforma las sentencias de lenguaje natural a sentencias de SQL, las executa y pinta los resultados en pantalla.
 
 ## **Uso** 
