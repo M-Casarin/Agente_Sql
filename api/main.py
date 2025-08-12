@@ -1,4 +1,7 @@
-from  fastapi import FastAPI, Request 
+import os 
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) # subir un nivel mas para leer todos los modulos
+from fastapi import FastAPI, Request 
 from fastapi.middleware.cors import CORSMiddleware 
 from fastapi.responses import HTMLResponse, FileResponse 
 from fastapi.staticfiles import StaticFiles 
