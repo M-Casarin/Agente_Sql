@@ -26,6 +26,16 @@ python -m venv .venv
 pip install -r requirements.txt 
 ```
 
+#### Opcion 3. LINUX. 
+```bash 
+python3 -m venv --without-pip .venv
+source .venv/bin/activate
+curl https://bootstrap.pypa.io/get-pip.py | python
+pip install -r requirements.txt
+
+
+```
+
 #### Crear la tabla para el historial del chat
 ```sql
 CREATE TABLE Historial_Chat(
@@ -57,7 +67,7 @@ AZURE_OPENAI_DEPLOYMENT_NAME=
 
 #### Levantar API 
 ```bash 
-uvicorn api.main:app --reload
+
 ```
 
 
